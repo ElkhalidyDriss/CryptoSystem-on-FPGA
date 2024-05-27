@@ -1,3 +1,17 @@
+-- ==========================================================================
+-- Project        : AES-128
+-- File           : shiftRows.vhd
+-- Authors        : Meziani EL-Houcine 
+--                  Elkhalidy Driss
+--
+-- Date           : May 2024
+-- Version        : 1.0
+-- 
+-- Description    : Implementation of the shiftRows block of the AES algorithm.
+-- 
+-- ==========================================================================
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 

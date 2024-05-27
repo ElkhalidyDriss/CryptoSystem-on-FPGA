@@ -1,8 +1,327 @@
+# Compile of multiplier2x2.vhd was successful.
 # Compile of shiftRows.vhd was successful.
+# Compile of multiplier2x2.vhd was successful.
+# Compile of multiplier2x2.vhd was successful.
+# Compile of multiplier2x2.vhd was successful.
+# Compile of multiplier4x4.vhd failed with 4 errors.
+# Compile of multiplier4x4.vhd failed with 1 errors.
+# Compile of multiplier4x4.vhd was successful.
 # Compile of subByte.vhd failed with 1 errors.
 # Compile of subByte.vhd failed with 1 errors.
+# Compile of subByte.vhd failed with 1 errors.
+# Compile of subByte.vhd failed with 3 errors.
+# Compile of subByte.vhd failed with 2 errors.
 # Compile of subByte.vhd was successful.
-# Compile of shiftRows.vhd was successful.
+# Compile of mult_inv.vhd failed with 1 errors.
+# Compile of mult_inv.vhd failed with 19 errors.
+# Compile of mult_inv.vhd failed with 19 errors.
+# Compile of mult_inv.vhd failed with 19 errors.
+# Compile of mult_inv.vhd failed with 2 errors.
+# Compile of mult_inv.vhd failed with 1 errors.
+# Compile of mult_inv.vhd was successful.
 # Compile of shiftRows.vhd was successful.
 # Compile of subByte.vhd was successful.
-# 2 compiles, 0 failed with no errors.
+# Compile of multiplier4x4.vhd was successful.
+# Compile of multiplier2x2.vhd was successful.
+# Compile of mult_inv.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of subByte.vhd was successful.
+# Compile of subByteTB.vhd failed with 2 errors.
+# Compile of subByteTB.vhd was successful.
+vsim -gui work.subbytetb
+# vsim -gui work.subbytetb 
+# Start time: 18:22:58 on May 26,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.subbytetb(subbytetb_arch)
+# Loading work.subbyte(subbytearch)
+# Loading work.multiplier4x4(multiplier4x4arch)
+# Loading work.mutliplier2x2(mutliplier2x2arch)
+# Loading work.mult_inv(mult_invarch)
+# ** Warning: (vsim-8684) No drivers exist on out port /subbytetb/uut/o_data(2), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /subbytetb/o_data_tb(2).
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 ascending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 ascending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 ascending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position end  sim:/subbytetb/i_data_tb
+add wave -position end  sim:/subbytetb/o_data_tb
+run
+run
+run
+run
+run
+run
+run
+run
+# WARNING: No extended dataflow license exists
+# Compile of shiftRows.vhd was successful.
+# Compile of subByte.vhd was successful.
+# Compile of multiplier4x4.vhd was successful.
+# Compile of multiplier2x2.vhd was successful.
+# Compile of mult_inv.vhd was successful.
+# Compile of subByteTB.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.subbytetb(subbytetb_arch)
+# Loading work.subbyte(subbytearch)
+# Loading work.multiplier4x4(multiplier4x4arch)
+# Loading work.mutliplier2x2(mutliplier2x2arch)
+# Loading work.mult_inv(mult_invarch)
+run
+# Compile of subByteTB.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.subbytetb(subbytetb_arch)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 18:34:53 on May 26,2024, Elapsed time: 0:11:55
+# Errors: 0, Warnings: 1
+vsim -gui work.subbytetb
+# vsim -gui work.subbytetb 
+# Start time: 18:35:10 on May 26,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.subbytetb(subbytetb_arch)
+# Loading work.subbyte(subbytearch)
+# Loading work.multiplier4x4(multiplier4x4arch)
+# Loading work.mutliplier2x2(mutliplier2x2arch)
+# Loading work.mult_inv(mult_invarch)
+run
+add wave -position end  sim:/subbytetb/i_data_tb
+add wave -position end  sim:/subbytetb/o_data_tb
+restart
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 18:41:43 on May 26,2024, Elapsed time: 0:06:33
+# Errors: 0, Warnings: 1

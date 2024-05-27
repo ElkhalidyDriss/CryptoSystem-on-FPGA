@@ -1,3 +1,15 @@
+-- ==========================================================================
+-- Project        : AES-128
+-- File           : shiftRows.vhd
+-- Authors         : Meziani EL-Houcine / Elkhalidy Driss
+-- Date           : YYYY-MM-DD
+-- Version        : 1.0
+-- 
+-- Description    : Implementation of the shiftRows block of the AES algorithm
+-- 
+-- ==========================================================================
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -8,7 +20,7 @@ entity shiftRows is
     );
 end entity;
 
-architecture shiftRows_arch of shiftRows is
+architecture shiftRowsArch of shiftRows is
 begin
     o_data(8*1 - 1 downto 8*0)    <= i_data(8*1 - 1 downto 8*0);
     o_data(8*2 - 1 downto 8*1)    <= i_data(8*6 - 1 downto 8*5);

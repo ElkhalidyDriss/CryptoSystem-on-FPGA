@@ -4,15 +4,49 @@ use ieee.std_logic_1164.all;
 
 entity subByte is 
 port(
-     i_data : in std_logic_vector(7 downto 0); --input data
+     i_data : in std_logic_vector(7 downto 0); --input data in GF(2^8)
      o_data : out std_logic_vector(7 downto 0)-- output data
 );
-
+end entity;
 
 architecture subByteArch of subByte is 
-
-
+signal data_m : std_logic_vector(7 downto 0); --isomorphic mapping of the input data to GF((2^4)^2)
+signal common1 , common2 , common3 , common4: std_logic;
+signal b , c : std_logic_vector(3 downto 0); --upper nibble and lower nibble of data_m
+signal t : std_logic_vector(3 downto 0); -- t = lambda.b^2 , output of the squarer 
+signal s : std_logic_vector(3 downto 0); -- s = c(b xor c) in GF(2^4)
+signal i_mult1 : std_logic_vector(3 downto 0); --input of MULT1
+component multiplier4x4  
+port (
+       i_data1 : in std_logic_vector(3 downto 0);
+       i_data2 : in std_logic_vector(3 downto 0);
+       o_data : out std_logic_vector(3 downto 0)
+);
+end component;
 begin
+------------Isomorphic mapping from GF(2^8) to GF((2^4)^2)---------
+common1 <= i_data(7) xor i_data(5);
+common2 <= i_data(7) xor i_data(6);
+common3 <= i_data(3) xor i_data(2) xor i_data(1);
+common4 <= i_data(6) xor i_data(1);
+data_m(7) <= common1;
+data_m(6) <= common2   xor i_data(4) xor common3;
+data_m(5) <= common1   xor i_data(3) xor i_data(2);
+data_m(4) <= common1   xor i_data(3) xor i_data(2) xor i_data(1);
+data_m(3) <= common2   xor i_data(2) xor i_data(1);
+data_m(2) <= i_data(7) xor i_data(4) xor common3;
+data_m(1) <= common4   xor i_data(4);
+data_m(0) <= common4   xor i_data(0);
+b <= data_m(7 downto 4);
+c <= data_m(3 downto 0);
+--t=lambda.b^2 in GF(2^4) where lambda = 0b1100
+t(3) <= b(2) xor b(1) xor b(0);
+t(2) <= b(3) xor b(0);
+t(1) <= b(3);
+t(0) <= b(3) xor b(2);
+--s=c(b xor c) in GF(2^8)
+i_mult1 <= b xor c ;
+MULT1 : multiplier4x4 port map (i_data1 => i_mult1 , i_data2 => c , o_data => s);
 
 
 
