@@ -1,0 +1,119 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity mixColumn is 
+port(
+     clk     : in std_logic;
+     i_block : in std_logic_vector(127 downto 0); --input data block  in GF(2^8)
+     o_block : out std_logic_vector(127 downto 0);-- output data
+     valid_i : in std_logic; --high when valid input is present
+     valid_o : out std_logic  --high when valid output data 
+);
+end entity;
+
+architecture mixColumnArch of mixColumn is
+    type state_t is (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15,idle);
+	signal current_state , next_state : state_t :=idle;
+    signal B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15 : std_logic_vector(7 downto 0);
+    signal C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15 : std_logic_vector(7 downto 0);
+    signal o_mult1, o_mult2 ,i_mult1 ,i_mult2 : std_logic_vector(7 downto 0);
+	signal is_valid_o : std_logic :='0';
+
+    
+
+component  polyMultBy2 
+    port(
+         i_data : in std_logic_vector(7 downto 0); --input data in GF(2^8)
+         o_data : out std_logic_vector(7 downto 0)-- output data in GF(2^8)
+    );
+    end component;
+component  polyMultBy3
+    port(
+         i_data : in std_logic_vector(7 downto 0); --input data in GF(2^8)
+         o_data : out std_logic_vector(7 downto 0)-- output data in GF(2^8)
+    );
+    end component;
+begin
+    B0  <= i_block(7 downto 0);
+    B1  <= i_block(15 downto 8);
+    B2  <= i_block(23 downto 16);
+    B3  <= i_block(31 downto 24);
+B4  <= i_block(39 downto 32);
+B5  <= i_block(47 downto 40);
+B6  <= i_block(55 downto 48);
+B7  <= i_block(63 downto 56);
+B8  <= i_block(71 downto 64);
+B9  <= i_block(79 downto 72);
+B10 <= i_block(87 downto 80);
+B11 <= i_block(95 downto 88);
+B12 <= i_block(103 downto 96);
+B13 <= i_block(111 downto 104);
+B14 <= i_block(119 downto 112);
+B15 <= i_block(127 downto 120);
+
+	--Implementation of the state machine that shares the multipliers for the different operations
+	MEMORY_LOGIC : process(clk)
+	               begin
+				        if (rising_edge(clk)) then
+						   current_state <= next_state;
+                                        end if; 
+		       end process;
+    NEXT_STATE_LOGIC : process(current_state , valid_i)
+                           begin
+	                   case (current_state) is 
+					         when S0    => next_state <= S1;
+            when S1    => next_state <= S2;
+            when S2    => next_state <= S3;
+            when S3    => next_state <= S4;
+            when S4    => next_state <= S5;
+            when S5    => next_state <= S6;
+            when S6    => next_state <= S7;
+            when S7    => next_state <= S8;
+            when S8    => next_state <= S9;
+            when S9    => next_state <= S10;
+            when S10   => next_state <= S11;
+            when S11   => next_state <= S12;
+            when S12   => next_state <= S13;
+            when S13   => next_state <= S14;
+            when S14   => next_state <= S15;
+            when S15   => next_state <= idle;
+                           is_valid_o <= '1';
+            when idle  => if valid_i = '1' then 
+                              next_state <= S0;
+                              is_valid_o <= '0';
+                          else 
+                              next_state <= idle;
+                          end if;
+            when others => next_state <= idle;
+						end case;
+						end process;
+    OUTPUT_LOGIC : process(current_state, o_mult1, o_mult2, B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15)
+	               begin
+				        case (current_state) is 
+						    when S0  => i_mult1 <= B0; i_mult2 <= B1; C0 <= o_mult1 xor o_mult2 xor B2 xor B3;
+            when S1  => i_mult1 <= B1; i_mult2 <= B2; C1 <= o_mult1 xor o_mult2 xor B0 xor B3;
+            when S2  => i_mult1 <= B2; i_mult2 <= B3; C2 <= o_mult1 xor o_mult2 xor B0 xor B1;
+            when S3  => i_mult1 <= B3; i_mult2 <= B0; C3 <= o_mult1 xor o_mult2 xor B1 xor B2;
+            when S4  => i_mult1 <= B4; i_mult2 <= B5; C4 <= o_mult1 xor o_mult2 xor B6 xor B7;
+            when S5  => i_mult1 <= B5; i_mult2 <= B6; C5 <= o_mult1 xor o_mult2 xor B4 xor B7;
+            when S6  => i_mult1 <= B6; i_mult2 <= B7; C6 <= o_mult1 xor o_mult2 xor B4 xor B5;
+            when S7  => i_mult1 <= B7; i_mult2 <= B4; C7 <= o_mult1 xor o_mult2 xor B5 xor B6;
+            when S8  => i_mult1 <= B8; i_mult2 <= B9; C8 <= o_mult1 xor o_mult2 xor B10 xor B11;
+            when S9  => i_mult1 <= B9; i_mult2 <= B10; C9 <= o_mult1 xor o_mult2 xor B8 xor B11;
+            when S10 => i_mult1 <= B10; i_mult2 <= B11; C10 <= o_mult1 xor o_mult2 xor B8 xor B9;
+            when S11 => i_mult1 <= B11; i_mult2 <= B8; C11 <= o_mult1 xor o_mult2 xor B9 xor B10;
+            when S12 => i_mult1 <= B12; i_mult2 <= B13; C12 <= o_mult1 xor o_mult2 xor B14 xor B15;
+            when S13 => i_mult1 <= B13; i_mult2 <= B14; C13 <= o_mult1 xor o_mult2 xor B12 xor B15;
+            when S14 => i_mult1 <= B14; i_mult2 <= B15; C14 <= o_mult1 xor o_mult2 xor B12 xor B13;
+            when S15 => i_mult1 <= B15; i_mult2 <= B12; C15 <= o_mult1 xor o_mult2 xor B13 xor B14;
+            when others => null; -- Do nothing
+							when others => null; --Do nothing			 
+                        end case;									 
+				   end process;
+	MULT1: polyMultBy2 port map(i_data => i_mult1, o_data => o_mult1);
+	MULT2: polyMultBy3 port map(i_data => i_mult2 , o_data => o_mult2);
+	valid_o <= is_valid_o;
+	o_block(127 downto 0) <= (C15 & C14 & C13 & C12 & C11 & C10 & C9 & C8 & C7 & C6 & C5 & C4 & C3 & C2 & C1 & C0) when (is_valid_o = '1') else (others => '0');
+
+end architecture;

@@ -1,56 +1,111 @@
-# Compile of multiplier2x2.vhd was successful.
-# Compile of shiftRows.vhd was successful.
-# Compile of multiplier2x2.vhd was successful.
-# Compile of multiplier2x2.vhd was successful.
-# Compile of multiplier2x2.vhd was successful.
-# Compile of multiplier4x4.vhd failed with 4 errors.
-# Compile of multiplier4x4.vhd failed with 1 errors.
-# Compile of multiplier4x4.vhd was successful.
-# Compile of subByte.vhd failed with 1 errors.
-# Compile of subByte.vhd failed with 1 errors.
-# Compile of subByte.vhd failed with 1 errors.
-# Compile of subByte.vhd failed with 3 errors.
-# Compile of subByte.vhd failed with 2 errors.
-# Compile of subByte.vhd was successful.
-# Compile of mult_inv.vhd failed with 1 errors.
-# Compile of mult_inv.vhd failed with 19 errors.
-# Compile of mult_inv.vhd failed with 19 errors.
-# Compile of mult_inv.vhd failed with 19 errors.
-# Compile of mult_inv.vhd failed with 2 errors.
-# Compile of mult_inv.vhd failed with 1 errors.
-# Compile of mult_inv.vhd was successful.
+# Compile of mixColumnTB.vhd was successful.
 # Compile of shiftRows.vhd was successful.
 # Compile of subByte.vhd was successful.
 # Compile of multiplier4x4.vhd was successful.
 # Compile of multiplier2x2.vhd was successful.
 # Compile of mult_inv.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of subByte.vhd was successful.
-# Compile of subByteTB.vhd failed with 2 errors.
 # Compile of subByteTB.vhd was successful.
-vsim -gui work.subbytetb
-# vsim -gui work.subbytetb 
-# Start time: 18:22:58 on May 26,2024
+# Compile of polyMultBy2.vhd was successful.
+# Compile of polyMultBy3.vhd was successful.
+# Compile of mixColumn.vhd was successful.
+# Compile of mixColumnTB.vhd was successful.
+# Compile of polyMultBy3tb.vhd was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.mixcolumntb
+# vsim -gui work.mixcolumntb 
+# Start time: 21:40:15 on May 30,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.subbytetb(subbytetb_arch)
-# Loading work.subbyte(subbytearch)
-# Loading work.multiplier4x4(multiplier4x4arch)
-# Loading work.mutliplier2x2(mutliplier2x2arch)
-# Loading work.mult_inv(mult_invarch)
-# ** Warning: (vsim-8684) No drivers exist on out port /subbytetb/uut/o_data(2), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /subbytetb/o_data_tb(2).
-# Trace back: Error QStructure::sort: invalid command name ""
-#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 ascending
-#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 ascending
-#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending
-#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 ascending
-#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
-#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
-add wave -position end  sim:/subbytetb/i_data_tb
-add wave -position end  sim:/subbytetb/o_data_tb
+# Loading work.mixcolumntb(tb_arch)
+# Loading work.mixcolumn(mixcolumnarch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.polymultby2(polymultby2arch)
+# Loading work.polymultby3(polymultby3arch)
+add wave -position insertpoint  \
+sim:/mixcolumntb/clk \
+sim:/mixcolumntb/i_block \
+sim:/mixcolumntb/valid_i \
+sim:/mixcolumntb/valid_o \
+sim:/mixcolumntb/o_block
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Idriss  Hostname: DESKTOP-Q63H9VJ  ProcessID: 16268
+#           Attempting to use alternate WLF file "./wlftc3902r".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc3902r
+add wave -position insertpoint  \
+sim:/mixcolumntb/DUT/current_state \
+sim:/mixcolumntb/DUT/next_state \
+sim:/mixcolumntb/DUT/B0 \
+sim:/mixcolumntb/DUT/B1 \
+sim:/mixcolumntb/DUT/B2 \
+sim:/mixcolumntb/DUT/B3 \
+sim:/mixcolumntb/DUT/B4 \
+sim:/mixcolumntb/DUT/B5 \
+sim:/mixcolumntb/DUT/B6 \
+sim:/mixcolumntb/DUT/B7 \
+sim:/mixcolumntb/DUT/B8 \
+sim:/mixcolumntb/DUT/B9 \
+sim:/mixcolumntb/DUT/B10 \
+sim:/mixcolumntb/DUT/B11 \
+sim:/mixcolumntb/DUT/B12 \
+sim:/mixcolumntb/DUT/B13 \
+sim:/mixcolumntb/DUT/B14 \
+sim:/mixcolumntb/DUT/B15 \
+sim:/mixcolumntb/DUT/C0 \
+sim:/mixcolumntb/DUT/C1 \
+sim:/mixcolumntb/DUT/C2 \
+sim:/mixcolumntb/DUT/C3 \
+sim:/mixcolumntb/DUT/C4 \
+sim:/mixcolumntb/DUT/C5 \
+sim:/mixcolumntb/DUT/C6 \
+sim:/mixcolumntb/DUT/C7 \
+sim:/mixcolumntb/DUT/C8 \
+sim:/mixcolumntb/DUT/C9 \
+sim:/mixcolumntb/DUT/C10 \
+sim:/mixcolumntb/DUT/C11 \
+sim:/mixcolumntb/DUT/C12 \
+sim:/mixcolumntb/DUT/C13 \
+sim:/mixcolumntb/DUT/C14 \
+sim:/mixcolumntb/DUT/C15 \
+sim:/mixcolumntb/DUT/o_mult1 \
+sim:/mixcolumntb/DUT/o_mult2 \
+sim:/mixcolumntb/DUT/i_mult1 \
+sim:/mixcolumntb/DUT/i_mult2 \
+sim:/mixcolumntb/DUT/is_valid_o
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of mixColumnTB.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mixcolumntb(tb_arch)
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run
@@ -66,19 +121,23 @@ run
 # Compile of multiplier2x2.vhd was successful.
 # Compile of mult_inv.vhd was successful.
 # Compile of subByteTB.vhd was successful.
-# 6 compiles, 0 failed with no errors.
+# Compile of polyMultBy2.vhd was successful.
+# Compile of polyMultBy3.vhd was successful.
+# Compile of mixColumn.vhd was successful.
+# Compile of mixColumnTB.vhd failed with 2 errors.
+# Compile of polyMultBy3tb.vhd was successful.
+# 11 compiles, 1 failed with 2 errors.
+# Compile of mixColumnTB.vhd failed with 1 errors.
+# Compile of mixColumnTB.vhd failed with 1 errors.
+# Compile of mixColumnTB.vhd failed with 1 errors.
+# Compile of mixColumnTB.vhd was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.subbytetb(subbytetb_arch)
-# Loading work.subbyte(subbytearch)
-# Loading work.multiplier4x4(multiplier4x4arch)
-# Loading work.mutliplier2x2(mutliplier2x2arch)
-# Loading work.mult_inv(mult_invarch)
+# Loading work.mixcolumntb(tb_arch)
+# Loading work.mixcolumn(mixcolumnarch)
+# Loading work.polymultby2(polymultby2arch)
+# Loading work.polymultby3(polymultby3arch)
 run
-# Compile of subByteTB.vhd was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.subbytetb(subbytetb_arch)
 run
 run
 run
@@ -93,26 +152,8 @@ run
 run
 run
 run
-quit -sim
-# End time: 18:34:53 on May 26,2024, Elapsed time: 0:11:55
-# Errors: 0, Warnings: 1
-vsim -gui work.subbytetb
-# vsim -gui work.subbytetb 
-# Start time: 18:35:10 on May 26,2024
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.subbytetb(subbytetb_arch)
-# Loading work.subbyte(subbytearch)
-# Loading work.multiplier4x4(multiplier4x4arch)
-# Loading work.mutliplier2x2(mutliplier2x2arch)
-# Loading work.mult_inv(mult_invarch)
 run
-add wave -position end  sim:/subbytetb/i_data_tb
-add wave -position end  sim:/subbytetb/o_data_tb
-restart
 run
-restart
 run
 run
 run
@@ -130,198 +171,3 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-quit -sim
-# End time: 18:41:43 on May 26,2024, Elapsed time: 0:06:33
-# Errors: 0, Warnings: 1

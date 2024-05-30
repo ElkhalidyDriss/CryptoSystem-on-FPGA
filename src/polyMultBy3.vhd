@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_arith.all;
+
+entity polyMultBy3 is 
+port(
+     i_data : in std_logic_vector(7 downto 0); --input data in GF(2^8)
+     o_data : out std_logic_vector(7 downto 0)-- output data in GF(2^8)
+);
+end entity;
+
+
+architecture polyMultBy3Arch of polyMultBy3 is
+signal i_data_sll : std_logic_vector(7 downto 0); --input data shift left by 1
+component polyMultBy2  
+port(
+     i_data : in std_logic_vector(7 downto 0); --input data in GF(2^8)
+     o_data : out std_logic_vector(7 downto 0)-- output data in GF(2^8)
+);
+end component;
+begin
+        i_data_sll <= SHL(i_data ,CONV_STD_LOGIC_VECTOR(1,1)) xor i_data;
+        process(i_data , i_data_sll)
+        begin
+            if (i_data(7) = '1') then 
+                o_data <= i_data_sll xor X"1B";--shift left logical by 1 , xor it with Ox1B
+            else 
+                o_data <= i_data_sll;
+            end if;
+        end process;
+end architecture;
