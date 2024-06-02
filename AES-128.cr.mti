@@ -1,4 +1,60 @@
-C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd
+C:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Idriss\Documents\Projects\AES-128\src\subByte.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity subByte
+-- Compiling architecture subByteArch of subByte
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mult_inv
+-- Compiling architecture mult_invArch of mult_inv
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiplier4x4
+-- Compiling architecture multiplier4x4Arch of multiplier4x4
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/addKey.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Idriss\Documents\Projects\AES-128\src\addKey.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity addKey
+-- Compiling architecture addKeyArch of addKey
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mixColumnTB
+-- Compiling architecture tb_arch of mixColumnTB
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/simulation/polyMultBy3tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/simulation/polyMultBy3tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity polyMultBy3tb
+-- Compiling architecture tb_arch of polyMultBy3tb
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity LFSR_TB
+-- Compiling architecture LFSR_TBarch of LFSR_TB
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Idriss\Documents\Projects\AES-128\src\shiftRows.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -14,22 +70,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity subByteTB
 -- Compiling architecture subByteTB_arch of subByteTB
 
-} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity mult_inv
--- Compiling architecture mult_invArch of mult_inv
-
-} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity subByte
--- Compiling architecture subByteArch of subByte
-
 } {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -37,22 +77,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_1164
 -- Compiling entity mutliplier2x2
 -- Compiling architecture mutliplier2x2Arch of mutliplier2x2
-
-} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity multiplier4x4
--- Compiling architecture multiplier4x4Arch of multiplier4x4
-
-} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/simulation/polyMultBy3tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/simulation/polyMultBy3tb.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity polyMultBy3tb
--- Compiling architecture tb_arch of polyMultBy3tb
 
 } {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -64,7 +88,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity polyMultBy2
 -- Compiling architecture polyMultBy2Arch of polyMultBy2
 
-} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Idriss\Documents\Projects\AES-128\src\polyMultBy3.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -73,5 +97,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity polyMultBy3
 -- Compiling architecture polyMultBy3Arch of polyMultBy3
+
+} {} {}} C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mixColumn
+-- Compiling architecture mixColumnArch of mixColumn
 
 } {} {}}

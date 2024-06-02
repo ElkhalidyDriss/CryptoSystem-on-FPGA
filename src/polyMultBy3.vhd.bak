@@ -21,7 +21,7 @@ port(
 end component;
 begin
         i_data_sll <= SHL(i_data ,CONV_STD_LOGIC_VECTOR(1,1)) xor i_data;
-        process(i_data)
+        process(i_data , i_data_sll)
         begin
             if (i_data(7) = '1') then 
                 o_data <= i_data_sll xor X"1B";--shift left logical by 1 , xor it with Ox1B
