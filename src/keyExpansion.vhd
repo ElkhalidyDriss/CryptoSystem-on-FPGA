@@ -24,14 +24,17 @@ end entity;
 -- Architecture for keyExpansion
 architecture behavior of keyExpansion is
     type word_array is array (0 to 43) of std_logic_vector(31 downto 0);  -- Type declaration for array of words
+	type key_array is array (0 to 10) of std_logic_vector(127 downto 0);
+    signal round_keys : key_array;
     signal w : word_array;  -- Signal for storing intermediate words
-    signal round_keys : array(0 to 10) of std_logic_vector(127 downto 0);  -- Signal for storing round keys
     signal temp : std_logic_vector(31 downto 0);  -- Temporary signal for intermediate calculations
     signal subWord_out : std_logic_vector(31 downto 0);  -- Output signal from SubWord component
-    constant Rcon : array(1 to 10) of std_logic_vector(31 downto 0) := (  -- Round constant array
+    type Rcon_array is array(1 to 10) of std_logic_vector(31 downto 0);
+    constant Rcon : Rcon_array:= (  -- Round constant array
         x"01000000", x"02000000", x"04000000", x"08000000", x"10000000", 
         x"20000000", x"40000000", x"80000000", x"1B000000", x"36000000"
     );
+    signal i_subWord : std_logic_vector(31 downto 0); --input to subWord 
 
     -- Component declaration for SubWord
     component subWord is
@@ -42,6 +45,11 @@ architecture behavior of keyExpansion is
     end component;
 
 begin
+    SubWord_inst : subWord
+             port map (
+                 i_dataWord => i_subWord,
+                 o_dataWord => subWord_out
+                  );
     process(clk)
     begin
         if rising_edge(clk) then
@@ -53,18 +61,14 @@ begin
             round_keys(0) <= key;
             
             -- Generate round keys for rounds 1 to 10
-            for i in 1 to 10 loop
+            for i in 1 to 10 loop 
                 -- Temporary variable holds the last word
                 temp <= w(4*i-1);
                 -- Rotate word (RotWord)
                 temp <= temp(23 downto 0) & temp(31 downto 24);
                 
                 -- Substitute word (SubWord)
-                SubWord_inst : subWord
-                    port map (
-                        i_dataWord => temp,
-                        o_dataWord => subWord_out
-                    );
+                i_subWord <= temp;
                 
                 -- XOR with round constant
                 temp <= subWord_out xor Rcon(i);
@@ -78,7 +82,11 @@ begin
                 -- Concatenate words to form the round key
                 round_keys(i) <= w(4*i) & w(4*i+1) & w(4*i+2) & w(4*i+3);
             end loop;
+
             
+
+        end if;
+    end process;
             -- Assign round keys to output ports
             round_key0 <= round_keys(0);
             round_key1 <= round_keys(1);
@@ -91,6 +99,4 @@ begin
             round_key8 <= round_keys(8);
             round_key9 <= round_keys(9);
             round_key10 <= round_keys(10);
-        end if;
-    end process;
 end behavior;
