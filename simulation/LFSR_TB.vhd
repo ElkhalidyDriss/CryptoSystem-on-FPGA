@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity LFSR_TB is 
+end entity;
+
+
+architecture LFSR_TBarch of LFSR_TB is
+constant clk_period : time := 10 ns ;
+signal clkTB , enableTB : std_logic;
+signal o_lsfrTB : std_logic_vector(127 downto 0);
+
+component LFSR --Component declaration
+port(  clk  : in std_logic;
+       enable : in std_logic;
+       o_lfsr : out std_logic_vector(127 downto 0)
+	);
+end component;
+
+begin 
+DUT : LFSR port map (clk => clkTB , enable => enableTB , o_lfsr => o_lsfrTB);--component instantiation
+CLK_PROCESS : process 
+               begin
+			        clkTB <= '0'; wait for clk_period/2;
+					clkTB <= '1'; wait for clk_period/2;
+			   end process;
+STIMILUS : process
+           begin
+           enableTB <= '0';
+		   wait for 2*clk_period; --holding enable low for 2 clock cycles 
+		   
+		   enableTB <= '1';
+		   wait for 6*clk_period;
+		   
+		   enableTB <= '0';
+		   wait for 6*clk_period;
+		   
+		   enableTB <= '1';
+		   wait for 6*clk_period;
+		   
+		   wait;
+		   end process;
+end architecture ;
