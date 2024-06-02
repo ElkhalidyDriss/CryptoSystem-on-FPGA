@@ -34,6 +34,7 @@ architecture behavior of keyExpansion is
         x"01000000", x"02000000", x"04000000", x"08000000", x"10000000", 
         x"20000000", x"40000000", x"80000000", x"1B000000", x"36000000"
     );
+    signal i_subWord : std_logic_vector(31 downto 0); --input to subWord 
 
     -- Component declaration for SubWord
     component subWord is
@@ -44,6 +45,11 @@ architecture behavior of keyExpansion is
     end component;
 
 begin
+    SubWord_inst : subWord
+             port map (
+                 i_dataWord => i_subWord,
+                 o_dataWord => subWord_out
+                  );
     process(clk)
     begin
         if rising_edge(clk) then
@@ -62,11 +68,7 @@ begin
                 temp <= temp(23 downto 0) & temp(31 downto 24);
                 
                 -- Substitute word (SubWord)
-                SubWord_inst : subWord
-                    port map (
-                        i_dataWord => temp,
-                        o_dataWord => subWord_out
-                    );
+                i_subWord <= temp;
                 
                 -- XOR with round constant
                 temp <= subWord_out xor Rcon(i);
@@ -82,6 +84,9 @@ begin
             end loop;
 
             
+
+        end if;
+    end process;
             -- Assign round keys to output ports
             round_key0 <= round_keys(0);
             round_key1 <= round_keys(1);
@@ -94,6 +99,4 @@ begin
             round_key8 <= round_keys(8);
             round_key9 <= round_keys(9);
             round_key10 <= round_keys(10);
-        end if;
-    end process;
 end behavior;
