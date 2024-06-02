@@ -13,21 +13,21 @@ Eaddkey
 Z0 w1717275491
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 197
+!i122 229
 Z3 dC:/Users/Idriss/Documents/Projects/AES-128
-Z4 8C:\Users\Idriss\Documents\Projects\AES-128\src\addKey.vhd
-Z5 FC:\Users\Idriss\Documents\Projects\AES-128\src\addKey.vhd
+Z4 8C:/Users/Idriss/Documents/Projects/AES-128/src/addKey.vhd
+Z5 FC:/Users/Idriss/Documents/Projects/AES-128/src/addKey.vhd
 l0
 L5 1
 VPU2G@Uk@03:OeA`>5A=on3
 !s100 QbBGkHF:HEn<GZSK]:2O>2
 Z6 OV;C;2020.1;71
 32
-Z7 !s110 1717275523
+Z7 !s110 1717362377
 !i10b 1
-Z8 !s108 1717275523.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Idriss\Documents\Projects\AES-128\src\addKey.vhd|
-Z10 !s107 C:\Users\Idriss\Documents\Projects\AES-128\src\addKey.vhd|
+Z8 !s108 1717362377.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/addKey.vhd|
+Z10 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/addKey.vhd|
 !i113 1
 Z11 o-work work -2002 -explicit
 Z12 tExplicit 1 CvgOpt 0
@@ -35,14 +35,14 @@ Aaddkeyarch
 R1
 R2
 DEx4 work 6 addkey 0 22 PU2G@Uk@03:OeA`>5A=on3
-!i122 197
+!i122 229
 l15
 L13 5
 VWcO2WG7[8^bHJB:ZecdWP2
 !s100 jkUd05NUEgd]ZDQW=ZnzS2
 R6
 32
-!s110 1717275524
+R7
 !i10b 1
 R8
 R9
@@ -50,44 +50,89 @@ R10
 !i113 1
 R11
 R12
-Elfsr
-Z13 w1717320740
+Ekeyexpansion
+Z13 w1717363370
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R1
 R2
-!i122 217
+!i122 243
 R3
-Z14 8C:\Users\Idriss\Documents\Projects\AES-128\src\LFSR.vhd
-Z15 FC:\Users\Idriss\Documents\Projects\AES-128\src\LFSR.vhd
+Z16 8C:/Users/Idriss/Documents/Projects/AES-128/src/keyExpansion.vhd
+Z17 FC:/Users/Idriss/Documents/Projects/AES-128/src/keyExpansion.vhd
+l0
+L6 1
+VgkVlhmZ=NZid?^kVo]^=z1
+!s100 1H8P:?@EPSXjPJIOfAeVR1
+R6
+32
+Z18 !s110 1717363389
+!i10b 1
+Z19 !s108 1717363389.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/keyExpansion.vhd|
+!s107 C:/Users/Idriss/Documents/Projects/AES-128/src/keyExpansion.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R14
+R15
+R1
+R2
+DEx4 work 12 keyexpansion 0 22 gkVlhmZ=NZid?^kVo]^=z1
+!i122 243
+l47
+L25 78
+V`SX1;i@Jj6lHaj1ljMBNG2
+!s100 L59JGEZJBNB2BSiAb5YOk2
+R6
+32
+R18
+!i10b 1
+R19
+R20
+Z21 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/keyExpansion.vhd|
+!i113 1
+R11
+R12
+Elfsr
+Z22 w1717320740
+R1
+R2
+!i122 230
+R3
+Z23 8C:/Users/Idriss/Documents/Projects/AES-128/src/LFSR.vhd
+Z24 FC:/Users/Idriss/Documents/Projects/AES-128/src/LFSR.vhd
 l0
 L5 1
 VE7_^VEaQ[`Yo>>]MD]a5O3
 !s100 >NP3`Y@gQiF;AXao?ZYA52
 R6
 32
-Z16 !s110 1717336197
+Z25 !s110 1717362378
 !i10b 1
-Z17 !s108 1717336197.000000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Idriss\Documents\Projects\AES-128\src\LFSR.vhd|
-Z19 !s107 C:\Users\Idriss\Documents\Projects\AES-128\src\LFSR.vhd|
+Z26 !s108 1717362378.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/LFSR.vhd|
+Z28 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/LFSR.vhd|
 !i113 1
 R11
 R12
 Alfsrarch
 R1
 R2
-Z20 DEx4 work 4 lfsr 0 22 E7_^VEaQ[`Yo>>]MD]a5O3
-!i122 217
+Z29 DEx4 work 4 lfsr 0 22 E7_^VEaQ[`Yo>>]MD]a5O3
+!i122 230
 l20
-Z21 L13 19
-Z22 VCL9E^1z5WD0lA;7A0Ug6c0
-Z23 !s100 ;zV9:3XWi>BC9<A5^2I^G0
+L13 19
+VCL9E^1z5WD0lA;7A0Ug6c0
+!s100 ;zV9:3XWi>BC9<A5^2I^G0
 R6
 32
-R16
+R25
 !i10b 1
-R17
-R18
-R19
+R26
+R27
+R28
 !i113 1
 R11
 R12
@@ -95,12 +140,12 @@ Alfsr_tb
 w1717319669
 R1
 R2
-R20
+R29
 !i122 209
-Z24 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd
-Z25 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd
+Z30 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd
+Z31 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd
 l21
-Z26 L9 36
+Z32 L9 36
 VIP8<6AiWQn`^JdjP6D2V93
 !s100 Z<gkf1fDNh11>PWN;4h]m1
 R6
@@ -108,30 +153,30 @@ R6
 !s110 1717319673
 !i10b 1
 !s108 1717319673.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd|
-Z28 !s107 C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd|
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd|
+Z34 !s107 C:/Users/Idriss/Documents/Projects/AES-128/simulation/LFSR_TB.vhd|
 !i113 1
 R11
 R12
 Elfsr_tb
-Z29 w1717319712
+Z35 w1717319712
 R1
 R2
-!i122 210
+!i122 232
 R3
-R24
-R25
+R30
+R31
 l0
 L5 1
 V2Z:WWW`<MnO_UTMRE]Of:1
 !s100 H?6Z8g@oP:I9f8_nkL68n1
 R6
 32
-Z30 !s110 1717319715
+R25
 !i10b 1
-Z31 !s108 1717319715.000000
-R27
-R28
+R26
+R33
+R34
 !i113 1
 R11
 R12
@@ -139,29 +184,29 @@ Alfsr_tbarch
 R1
 R2
 DEx4 work 7 lfsr_tb 0 22 2Z:WWW`<MnO_UTMRE]Of:1
-!i122 210
+!i122 232
 l21
-R26
+R32
 Va^ZRhM2ZD[F`[0f2zEU9Y2
 !s100 oJj_6hg7h2XmFDQhnEV?K1
 R6
 32
-R30
+R25
 !i10b 1
-R31
-R27
-R28
+R26
+R33
+R34
 !i113 1
 R11
 R12
 Emixcolumn
-Z32 w1717274073
+Z36 w1717274073
 R1
 R2
-!i122 194
+!i122 226
 R3
-Z33 8C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd
-Z34 FC:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd
+Z37 8C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd
+Z38 FC:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd
 l0
 L5 1
 VMaHH4YOm[@LibUW6IncIG0
@@ -171,8 +216,8 @@ R6
 R7
 !i10b 1
 R8
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd|
-Z36 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd|
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd|
+Z40 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/mixColumn.vhd|
 !i113 1
 R11
 R12
@@ -180,52 +225,11 @@ Amixcolumnarch
 R1
 R2
 DEx4 work 9 mixcolumn 0 22 MaHH4YOm[@LibUW6IncIG0
-!i122 194
+!i122 226
 l37
 L15 104
 Vl7>W>7^HOB;c>R62BKa:11
 !s100 k=KETnH`D1c4SZ@:=JCAm2
-R6
-32
-R7
-!i10b 1
-R8
-R35
-R36
-!i113 1
-R11
-R12
-Emixcolumntb
-R32
-R1
-R2
-!i122 195
-R3
-Z37 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd
-Z38 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd
-l0
-L4 1
-VB:KgD2T^=7LSIJ2ncdF`31
-!s100 H9nAJZXC5EmezU^U;Z]?P2
-R6
-32
-R7
-!i10b 1
-R8
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd|
-Z40 !s107 C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd|
-!i113 1
-R11
-R12
-Atb_arch
-R1
-R2
-DEx4 work 11 mixcolumntb 0 22 B:KgD2T^=7LSIJ2ncdF`31
-!i122 195
-l29
-L7 63
-V]X;9cR?_@2i_7;^?6]ZIT1
-!s100 [@Rj08;O3:KI99?27E5^41
 R6
 32
 R7
@@ -236,25 +240,66 @@ R40
 !i113 1
 R11
 R12
-Emult_inv
-R32
+Emixcolumntb
+R36
 R1
 R2
-!i122 190
+!i122 227
 R3
-Z41 8C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd
-Z42 FC:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd
+Z41 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd
+Z42 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd
+l0
+L4 1
+VB:KgD2T^=7LSIJ2ncdF`31
+!s100 H9nAJZXC5EmezU^U;Z]?P2
+R6
+32
+R7
+!i10b 1
+R8
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd|
+Z44 !s107 C:/Users/Idriss/Documents/Projects/AES-128/simulation/mixColumnTB.vhd|
+!i113 1
+R11
+R12
+Atb_arch
+R1
+R2
+DEx4 work 11 mixcolumntb 0 22 B:KgD2T^=7LSIJ2ncdF`31
+!i122 227
+l29
+L7 63
+V]X;9cR?_@2i_7;^?6]ZIT1
+!s100 [@Rj08;O3:KI99?27E5^41
+R6
+32
+R7
+!i10b 1
+R8
+R43
+R44
+!i113 1
+R11
+R12
+Emult_inv
+R36
+R1
+R2
+!i122 222
+R3
+Z45 8C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd
+Z46 FC:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd
 l0
 L17 1
 Vh0_aMXSHd5:;lO_^<zjAl0
 !s100 1EGcBdlU>3APLl:f9UIY80
 R6
 32
-Z43 !s110 1717275522
+Z47 !s110 1717362376
 !i10b 1
-Z44 !s108 1717275522.000000
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd|
-Z46 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd|
+Z48 !s108 1717362376.000000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd|
+Z50 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/mult_inv.vhd|
 !i113 1
 R11
 R12
@@ -262,40 +307,40 @@ Amult_invarch
 R1
 R2
 DEx4 work 8 mult_inv 0 22 h0_aMXSHd5:;lO_^<zjAl0
-!i122 190
+!i122 222
 l23
 L22 25
 VXdXQ9>:eaFJ1IKH>TCLEj2
 !s100 bhZoLZ4QT[6DiOKC[JS8R3
 R6
 32
-R43
+R47
 !i10b 1
-R44
-R45
-R46
+R48
+R49
+R50
 !i113 1
 R11
 R12
 Emultiplier4x4
-R32
+R36
 R1
 R2
-!i122 188
+!i122 220
 R3
-Z47 8C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd
-Z48 FC:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd
+Z51 8C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd
+Z52 FC:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd
 l0
 L4 1
 VUdhTGX@IfW]D4ieD_l;]80
 !s100 30D:_><i@mHkR5VcgI@8b1
 R6
 32
-R43
+R47
 !i10b 1
-R44
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd|
-Z50 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd|
+R48
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd|
+Z54 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier4x4.vhd|
 !i113 1
 R11
 R12
@@ -303,40 +348,40 @@ Amultiplier4x4arch
 R1
 R2
 DEx4 work 13 multiplier4x4 0 22 UdhTGX@IfW]D4ieD_l;]80
-!i122 188
+!i122 220
 l27
 L13 34
 V<c3i8<`>G_73?n^DU^6j_0
 !s100 ND^dZccKWW2iXHYd=]TLU3
 R6
 32
-R43
+R47
 !i10b 1
-R44
-R49
-R50
+R48
+R53
+R54
 !i113 1
 R11
 R12
 Emutliplier2x2
-R32
+R36
 R1
 R2
-!i122 189
+!i122 221
 R3
-Z51 8C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd
-Z52 FC:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd
+Z55 8C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd
+Z56 FC:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd
 l0
 L19 1
 VIlnK[T]m:mYHA@hAg295N2
 !s100 D07DgN4FF;bZ`UIZeQKQ80
 R6
 32
-R43
+R47
 !i10b 1
-R44
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd|
-Z54 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd|
+R48
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd|
+Z58 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/multiplier2x2.vhd|
 !i113 1
 R11
 R12
@@ -344,31 +389,31 @@ Amutliplier2x2arch
 R1
 R2
 DEx4 work 13 mutliplier2x2 0 22 IlnK[T]m:mYHA@hAg295N2
-!i122 189
+!i122 221
 l28
 L26 6
 VTDmGZCCK859e6Km]k5DW10
 !s100 Rog4aNFX5`fUeF=MooB720
 R6
 32
-R43
+R47
 !i10b 1
-R44
-R53
-R54
+R48
+R57
+R58
 !i113 1
 R11
 R12
 Epolymultby2
-R32
-Z55 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z56 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R36
+R14
+R15
 R1
 R2
-!i122 192
+!i122 224
 R3
-Z57 8C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd
-Z58 FC:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd
+Z59 8C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd
+Z60 FC:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd
 l0
 L6 1
 VDK:WQSEk@kM8eE09zZCa72
@@ -377,19 +422,19 @@ R6
 32
 R7
 !i10b 1
-R8
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd|
-Z60 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd|
+R48
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd|
+Z62 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy2.vhd|
 !i113 1
 R11
 R12
 Apolymultby2arch
-R55
-R56
+R14
+R15
 R1
 R2
 DEx4 work 11 polymultby2 0 22 DK:WQSEk@kM8eE09zZCa72
-!i122 192
+!i122 224
 l15
 L13 13
 VQMODzhiPO1l9jX3DS;NnH0
@@ -398,62 +443,62 @@ R6
 32
 R7
 !i10b 1
-R8
-R59
-R60
+R48
+R61
+R62
 !i113 1
 R11
 R12
 Epolymultby3
-Z61 w1717282001
-R55
-R56
+Z63 w1717282001
+R14
+R15
 R1
 R2
-!i122 198
+!i122 225
 R3
-Z62 8C:\Users\Idriss\Documents\Projects\AES-128\src\polyMultBy3.vhd
-Z63 FC:\Users\Idriss\Documents\Projects\AES-128\src\polyMultBy3.vhd
+Z64 8C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd
+Z65 FC:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd
 l0
 L6 1
 V<lBV2H9F?CgLKY]QbT5>R0
 !s100 D]F<6Kf;YB:_WC0>Hf1J_2
 R6
 32
-Z64 !s110 1717282006
+R7
 !i10b 1
-Z65 !s108 1717282005.000000
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Idriss\Documents\Projects\AES-128\src\polyMultBy3.vhd|
-Z67 !s107 C:\Users\Idriss\Documents\Projects\AES-128\src\polyMultBy3.vhd|
+R8
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd|
+Z67 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/polyMultBy3.vhd|
 !i113 1
 R11
 R12
 Apolymultby3arch
-R55
-R56
+R14
+R15
 R1
 R2
 DEx4 work 11 polymultby3 0 22 <lBV2H9F?CgLKY]QbT5>R0
-!i122 198
+!i122 225
 l16
 L14 13
 Va8=0Yn:N;JR]R9_hb1^fI2
 !s100 H>2XR3dCDcebOb6=SleO61
 R6
 32
-R64
+R7
 !i10b 1
-R65
+R8
 R66
 R67
 !i113 1
 R11
 R12
 Epolymultby3tb
-R32
+R36
 R1
 R2
-!i122 196
+!i122 228
 R3
 Z68 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/polyMultBy3tb.vhd
 Z69 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/polyMultBy3tb.vhd
@@ -475,7 +520,7 @@ Atb_arch
 R1
 R2
 DEx4 work 13 polymultby3tb 0 22 A_mIH7_H=KH<iTl?AYfjf2
-!i122 196
+!i122 228
 l24
 L7 44
 V0dUhJ7TFW3l64GiXj>KMk3
@@ -491,24 +536,24 @@ R71
 R11
 R12
 Eshiftrows
-R32
+R36
 R1
 R2
-!i122 186
+!i122 218
 R3
-Z72 8C:\Users\Idriss\Documents\Projects\AES-128\src\shiftRows.vhd
-Z73 FC:\Users\Idriss\Documents\Projects\AES-128\src\shiftRows.vhd
+Z72 8C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd
+Z73 FC:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd
 l0
 L18 1
 V@dI0XD;PzT5B3JX;eIBXM2
 !s100 gIa76EZIj=_SH?Me[PHm90
 R6
 32
-R43
+Z74 !s110 1717362375
 !i10b 1
-R44
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Idriss\Documents\Projects\AES-128\src\shiftRows.vhd|
-Z75 !s107 C:\Users\Idriss\Documents\Projects\AES-128\src\shiftRows.vhd|
+Z75 !s108 1717362375.000000
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd|
+Z77 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd|
 !i113 1
 R11
 R12
@@ -516,18 +561,18 @@ Ashiftrowsarch
 R1
 R2
 DEx4 work 9 shiftrows 0 22 @dI0XD;PzT5B3JX;eIBXM2
-!i122 186
+!i122 218
 l26
 L25 19
 VG99>Bm<k?TVFWYVXM@eOR1
 !s100 bJEV_?:FDP783]C9:cY@o0
 R6
 32
-R43
-!i10b 1
-R44
 R74
+!i10b 1
 R75
+R76
+R77
 !i113 1
 R11
 R12
@@ -545,33 +590,31 @@ R6
 !s110 1715538792
 !i10b 1
 !s108 1715538791.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd|
-!s107 C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd|
+R76
+R77
 !i113 1
 R11
 R12
 w1715538787
-FC:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd
-8C:/Users/Idriss/Documents/Projects/AES-128/src/shiftRows.vhd
 Esubbyte
-R32
+R36
 R1
 R2
-!i122 187
+!i122 219
 R3
-Z76 8C:\Users\Idriss\Documents\Projects\AES-128\src\subByte.vhd
-Z77 FC:\Users\Idriss\Documents\Projects\AES-128\src\subByte.vhd
+Z78 8C:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd
+Z79 FC:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd
 l0
 L5 1
 VWI6k]an6l_7<A=Eca:ll>2
 !s100 <BheCzz0BQfNb]gh=`_AN3
 R6
 32
-R43
+R47
 !i10b 1
-R44
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Idriss\Documents\Projects\AES-128\src\subByte.vhd|
-Z79 !s107 C:\Users\Idriss\Documents\Projects\AES-128\src\subByte.vhd|
+R75
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd|
+Z81 !s107 C:/Users/Idriss/Documents/Projects/AES-128/src/subByte.vhd|
 !i113 1
 R11
 R12
@@ -579,40 +622,40 @@ Asubbytearch
 R1
 R2
 DEx4 work 7 subbyte 0 22 WI6k]an6l_7<A=Eca:ll>2
-!i122 187
+!i122 219
 l38
 L12 69
 VzPPR:FdB495h?Z^R?DOS83
 !s100 iS2jd^`;XDicGMKeM`AKm1
 R6
 32
-R43
+R47
 !i10b 1
-R44
-R78
-R79
+R75
+R80
+R81
 !i113 1
 R11
 R12
 Esubbytetb
-R32
+R36
 R1
 R2
-!i122 191
+!i122 223
 R3
-Z80 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd
-Z81 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd
+Z82 8C:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd
+Z83 FC:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd
 l0
 L4 1
 V?B<E>J94jHS[RSO`[nf?71
 !s100 _HkY`;5f=@1b`46TL^W9C3
 R6
 32
-R43
+R47
 !i10b 1
-R44
-Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd|
-Z83 !s107 C:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd|
+R48
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd|
+Z85 !s107 C:/Users/Idriss/Documents/Projects/AES-128/simulation/subByteTB.vhd|
 !i113 1
 R11
 R12
@@ -620,18 +663,40 @@ Asubbytetb_arch
 R1
 R2
 DEx4 work 9 subbytetb 0 22 ?B<E>J94jHS[RSO`[nf?71
-!i122 191
+!i122 223
 l20
 L7 43
 V6DQaPGJE_]73obA[lN_3H1
 !s100 EkDidE@7Hz`H[Y3448U0L3
 R6
 32
-R43
+R47
 !i10b 1
-R44
-R82
-R83
+R48
+R84
+R85
+!i113 1
+R11
+R12
+Etop
+w1717322054
+R1
+R2
+!i122 231
+R3
+8C:/Users/Idriss/Documents/Projects/AES-128/src/top.vhd
+FC:/Users/Idriss/Documents/Projects/AES-128/src/top.vhd
+l0
+L6 1
+V>1IzJ8DF^nBYbZV<o;4gb0
+!s100 Y:FzN^LO3aJM?gelWbj:71
+R6
+32
+R25
+!i10b 1
+R26
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Idriss/Documents/Projects/AES-128/src/top.vhd|
+!s107 C:/Users/Idriss/Documents/Projects/AES-128/src/top.vhd|
 !i113 1
 R11
 R12
