@@ -72,7 +72,7 @@ begin
                 
                 -- XOR with round constant
                 temp <= subWord_out xor Rcon(i);
-                
+        
                 -- Generate words for the current round key
                 w(4*i) <= w(4*i-4) xor temp;
                 w(4*i+1) <= w(4*i) xor w(4*i-3);
