@@ -24,7 +24,7 @@ end entity;
 
 architecture shiftRowsArch of shiftRows is
 begin
-    o_data(7  downto 0)   <= i_data(7 downto 0);
+    o_data(7 downto 0)   <= i_data(7 downto 0);
     o_data(15 downto 8)   <= i_data(47 downto 40);
     o_data(23 downto 16)  <= i_data(87 downto 80);
     o_data(31 downto 24)  <= i_data(127 downto 120);
