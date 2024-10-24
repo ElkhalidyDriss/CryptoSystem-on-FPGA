@@ -10,7 +10,6 @@ port(
 end entity;
 
 architecture subByteArch of subByte is 
---!!For naming convetions , please refer to our proposed architecture in the documentation of this project.
 signal data_m : std_logic_vector(7 downto 0); --isomorphic mapping of the input data to GF((2^4)^2)
 signal data_m_inv : std_logic_vector(7 downto 0); --inverse in GF(((2^4)^2)
 signal common1 , common2 , common3 , common4: std_logic;
