@@ -9,6 +9,7 @@ This project outlines the RTL implementation of the Advanced Encryption Standard
 ```plaintext
 ├── Docs
 │   └── FSM.svg
+│   └── gtkwave.png
 ├── generate_waveforms.py
 ├── LICENSE
 ├── README.md
@@ -54,7 +55,7 @@ To generate the waveforms and visualize them, follow these steps:
    ```bash
    python generate_waveforms.py top_tb.vhd```
 **vcd file will be saved to waveforms/ and GTKwave will be opened**
-
+![gtkwave](./Docs/gtkwave.png)
 
  
 
