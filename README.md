@@ -31,4 +31,29 @@ This project outlines the RTL implementation of the Advanced Encryption Standard
 │   └── top_tb.vcd
 └── work-obj93.cf
 ```
+### Generating and Visualizing Waveforms
+
+#### Overview
+
+This guide explains how to generate waveform files and visualize them using the `generate_waveform.py` script. This script compiles your VHDL design files along with a specified test bench file using GHDL, and generates a waveform file in VCD format, which can be visualized in GTKWave.
+
+#### Prerequisites
+
+Before running the script, ensure that you have the following installed and accessible in your system PATH:
+
+- **GHDL**: A VHDL simulator used for compiling the design files and running the simulations.
+- **GTKWave**: A VCD waveform viewer used for visualizing the generated waveform files.
+  
+#### Usage
+
+To generate the waveforms and visualize them, follow these steps:
+
+1. **Open a terminal.**
+2. **Navigate to the project directory**
+3. **Run the script** with the name of test bench file as a parameter. For example:
+   ```bash
+   python generate_waveforms.py top_tb.vhd
+
+
+ 
 
