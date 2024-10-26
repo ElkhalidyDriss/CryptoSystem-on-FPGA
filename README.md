@@ -6,6 +6,7 @@ This project outlines the RTL implementation of the Advanced Encryption Standard
 
 ![SVG Image](./Docs/FSM.svg)
 ### Project Structure 
+```plaintext
 ├── Docs
 │   └── FSM.svg
 ├── generate_waveforms.py
@@ -29,3 +30,5 @@ This project outlines the RTL implementation of the Advanced Encryption Standard
 │   ├── mixColumnTB.vcd
 │   └── top_tb.vcd
 └── work-obj93.cf
+```
+
