@@ -14,20 +14,20 @@ port (	clk   : in std_logic;
 end entity;
 
 architecture topArch of top is
-signal ciphertext : std_logic_vector(127 downto 0);
+signal ciphertext : std_logic_vector(127 downto 0) :=(others => '0');
 type KeysArray_t is array(0 to 10) of std_logic_vector(127 downto 0);
 signal KeysArray : KeysArray_t := (
-		x"603831ecfe9608b36097849996c7f693",  -- Round 0
-		x"a77aed7c59ece5cf397b6156afbc97c5",  -- Round 1
-		x"c0f24b05991eaecaa065cf9c0fd95859",  -- Round 2
-		x"f198807368862eb9c8e3e125c73ab97c",  -- Round 3
-		x"79ce90b51148be0cd9ab5f291e91e655",  -- Round 4
-		x"e8406cc7f908d2cb20a38de23e326bb7",  -- Round 5
-		x"eb3fc575123717be32949a5c0ca6f1eb",  -- Round 6
-		x"8f9e2c8b9da93b35af3da169a39b5082",  -- Round 7
-		x"1bcd3f81866404b42959a5dd8ac2f55f",  -- Round 8
-		x"252bf0ffa34ff44b8a16519600d4a4c9",  -- Round 9
-		x"5b622d9cf82dd9d7723b884172ef2c88"); -- Round 10
+		x"2b7e151628aed2a6abf7158809cf4f3c",  -- Round 0
+		x"a0fafe1788542cb123a339392a6c7605",  -- Round 1
+		x"f2c295f27a96b9435935807a7359f67f",  -- Round 2
+		x"3d80477d4716fe3e1e237e446d7a883b",  -- Round 3
+		x"ef44a541a8525b7fb671253bdb0bad00",  -- Round 4
+		x"d4d1c6f87c839d87caf2b8bc11f915bc",  -- Round 5
+		x"6d88a37a110b3efddbf98641ca0093fd",  -- Round 6
+		x"4e54f70e5f5fc9f384a64fb24ea6dc4f",  -- Round 7
+		x"ead27321b58dbad2312bf5607f8d292f",  -- Round 8
+		x"ac7766f319fadc2128d12941575c006e",  -- Round 9
+		x"d014f9a8c9ee2589e13f0cc8b6630ca6"); -- Round 10
 constant max_rounds : unsigned(3 downto 0) := x"A";
 signal round    : unsigned(3 downto 0) :=(others => '0');
 signal roundReg : unsigned(3 downto 0) :=(others => '0');
@@ -48,12 +48,9 @@ signal o_dataShiftRows : std_logic_vector(127 downto 0);
 signal i_dataMixColumn : std_logic_vector(127 downto 0);
 signal o_dataMixColumn : std_logic_vector(127 downto 0);
 
-signal tempCiphertext : std_logic_vector(127 downto 0) :=(others => '0');
 
 signal finished : std_logic :='0';
-signal tempPlaintext : std_logic_vector(127 downto 0);
-signal cipherRegWE : std_logic :='0';--ciphertext register write enable
-signal cipherTextReg : std_logic_vector(127 downto 0);--ciphertext register
+
 component subByte 
 port(
      i_data : in std_logic_vector(7 downto 0); --input data 
@@ -130,7 +127,6 @@ begin
 
 	NEXT_STATE_LOGIC  : process(current_state , start ,round)
 	                    begin
-						cipherRegWE <= '0';
 						case (current_state) is
 				        when idle => 
                              if start = '1' then 
@@ -164,7 +160,6 @@ begin
 				  end process;
 	OUTPUT_LOGIC : process (current_state )
 	               begin
-					    cipherRegWE <= '0';
 						finished <= '0';
 				        case (current_state) is
 				        when idle =>
@@ -194,7 +189,6 @@ begin
                         when finish =>
 						     ciphertext <= o_dataAddKey;
 							 valid_o <= '1';
-						     cipherRegWE <= '1';
 							 busy <= '0';
 							 finished <= '1';
 				        when others => 
