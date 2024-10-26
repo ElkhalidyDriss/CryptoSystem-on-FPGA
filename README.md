@@ -66,7 +66,7 @@ There is always room for improvement in this project. Here are some planned enha
 
 - **Padding Support**: Adding functionality to support padding for plaintext inputs that are not equal to 128 bits. *(Near Future)*
 
-- **Control and Buffer Registers**: Introducing control registers and buffer registers to store the input and output plaintext. *(Near Future)*
+- **Control and Buffer Registers**: Introducing control registers and buffer registers to store the input plaintext and the generated ciphertext and key   . *(Near Future)*
 
 - **SoC Integration**: Integrating the design into a System on Chip (SoC) for useful usage. *(Later)*
 
