@@ -1,8 +1,8 @@
-library IEEE;
+library IEEE; 
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity mixColumnTB is
-end entity;
+end entity; 
 
 architecture mixColumnTB_arch of mixColumnTB is
 signal i_block_tb : std_logic_vector(127 downto 0) := (others => '0');

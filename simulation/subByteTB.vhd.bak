@@ -1,40 +1,75 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity subByteTB is
 end entity subByteTB;
 
 architecture subByteTB_arch of subByteTB is
-    -- Component declaration for the unit under test (UUT)
-    component subByte
+    type SBoxArray is array (0 to 255) of std_logic_vector(7 downto 0);
+    constant SBox : SBoxArray := (
+        x"63", x"7C", x"77", x"7B", x"F2", x"6B", x"6F", x"C5",
+        x"30", x"01", x"67", x"2B", x"FE", x"D7", x"AB", x"76",
+        x"CA", x"82", x"C9", x"7D", x"FA", x"59", x"47", x"F0",
+        x"AD", x"D4", x"A2", x"AF", x"9C", x"A4", x"72", x"C0",
+        x"B7", x"FD", x"93", x"26", x"36", x"3F", x"F7", x"CC",
+        x"34", x"A5", x"E5", x"F1", x"71", x"D8", x"31", x"15",
+        x"04", x"C7", x"23", x"C3", x"18", x"96", x"05", x"9A",
+        x"07", x"12", x"80", x"E2", x"EB", x"27", x"B2", x"75",
+        x"09", x"83", x"2C", x"1A", x"1B", x"6E", x"5A", x"A0",
+        x"52", x"3B", x"D6", x"B3", x"29", x"E3", x"2F", x"84",
+        x"53", x"D1", x"00", x"ED", x"20", x"FC", x"B1", x"5B",
+        x"6A", x"CB", x"BE", x"39", x"4A", x"4C", x"58", x"CF",
+        x"D0", x"EF", x"AA", x"FB", x"43", x"4D", x"33", x"85",
+        x"45", x"F9", x"02", x"7F", x"50", x"3C", x"9F", x"A8",
+        x"51", x"A3", x"40", x"8F", x"92", x"9D", x"38", x"F5",
+        x"BC", x"B6", x"DA", x"21", x"10", x"FF", x"F3", x"D2",
+        x"C4", x"E3", x"4E", x"6F", x"98", x"88", x"71", x"3E",
+        x"5D", x"41", x"79", x"7A", x"62", x"19", x"9C", x"79",
+        x"82", x"A4", x"9E", x"71", x"F0", x"3D", x"FF", x"C8",
+        x"B5", x"BA", x"48", x"E2", x"BB", x"7E", x"62", x"36",
+        x"79", x"24", x"4E", x"50", x"39", x"2A", x"4B", x"F9",
+        x"83", x"7B", x"DA", x"36", x"53", x"51", x"7A", x"27",
+        x"7B", x"45", x"68", x"F1", x"24", x"9D", x"54", x"7D",
+        x"85", x"2B", x"62", x"31", x"B0", x"B8", x"8F", x"DA",
+        x"88", x"0B", x"1D", x"9F", x"A8", x"FA", x"10", x"C4",
+        x"46", x"5E", x"24", x"92", x"61", x"3F", x"78", x"B6",
+        x"91", x"73", x"47", x"9C", x"40", x"9E", x"2F", x"F8",
+        x"93", x"88", x"7A", x"BA", x"3D", x"0F", x"AE", x"39",
+        x"CE", x"A0", x"A5", x"88", x"72", x"3A", x"21", x"11",
+        x"DA", x"6C", x"8C", x"B2", x"12", x"4C", x"86", x"6D",
+        x"DA", x"55", x"65", x"84", x"3E", x"CA", x"38", x"4F",
+        x"C0", x"16", x"CC", x"92", x"6C", x"F9", x"84", x"A1",
+        x"65", x"80", x"DA", x"1E", x"EA", x"B3", x"DA", x"3C"
+    );
+
+    signal i_data_tb : std_logic_vector(7 downto 0) := (others => '0');
+    signal o_data_tb : std_logic_vector(7 downto 0);
+    
+    component subByte is
         port(
             i_data : in std_logic_vector(7 downto 0); -- input data in GF(2^8)
             o_data : out std_logic_vector(7 downto 0) -- output data
         );
     end component;
 
-    -- Signal declarations to connect to the UUT
-    signal i_data_tb : std_logic_vector(7 downto 0) := (others => '0');
-    signal o_data_tb : std_logic_vector(7 downto 0);
-
 begin
-    -- Instantiate the Unit Under Test (UUT)
-    uut: subByte
+    DUT : subByte
         port map (
             i_data => i_data_tb,
             o_data => o_data_tb
         );
 
-    -- Test process
-    process
+    STIMULUS : process
     begin
-        -- Test vector 1
-        i_data_tb <= "11110000"; -- Apply input
-        wait for 10 ns;       -- Wait for output to settle
-        assert o_data_tb = "10001100" -- Replace with expected output
-            report "Test vector 1 failed" severity error;
-
-        -- End simulation
+        for i in 0 to 255 loop
+            report "TEST " & integer'image(i);  
+            i_data_tb <= std_logic_vector(to_unsigned(i, 8)); 
+            wait for 10 ns;
+            assert o_data_tb = SBox(i)
+                report "TEST " & integer'image(i) & " failed" severity error;
+            wait for 10 ns;
+        end loop; 
         wait;
     end process;
 end architecture subByteTB_arch;

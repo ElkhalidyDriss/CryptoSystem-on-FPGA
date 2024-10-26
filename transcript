@@ -1,3 +1,12 @@
-# Compile of shiftRows.vhd was successful.
-# Compile of shiftRows_TB.vhd was successful with warnings.
-# Compile of shiftRows_TB.vhd was successful.
+# Compile of top.vhd failed with 8 errors.
+# Compile of top.vhd failed with 7 errors.
+# Compile of top.vhd failed with 1 errors.
+# Compile of top.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd failed with 1 errors.
+# Compile of top_tb.vhd failed with 2 errors.
+# Compile of top_tb.vhd failed with 2 errors.
+# Compile of top_tb.vhd failed with 1 errors.
+# Compile of top_tb.vhd was successful with warnings.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd was successful.

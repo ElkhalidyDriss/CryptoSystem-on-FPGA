@@ -66,100 +66,99 @@ B15 <= i_block(127 downto 120);
 --CO Computation
 multBy2_0 : polyMultBy2 port map( i_data => B0,
                                   o_data => o_mult_by2_0);
-multBy3_0 : polyMultBy3 port map( i_data => B1,
+multBy3_0 : polyMultBy3 port map( i_data => B3,
                                   o_data => o_mult_by3_0 );
-C0 <= o_mult_by2_0 xor o_mult_by3_0 xor B2 xor B3;
+C0 <= o_mult_by2_0 xor o_mult_by3_0 xor B2 xor B1;
 --C1 Computation
 multBy2_1 : polyMultBy2 port map( i_data => B1,
                                   o_data => o_mult_by2_1);
-multBy3_1 : polyMultBy3 port map( i_data => B2,
+multBy3_1 : polyMultBy3 port map( i_data => B0,
                                   o_data => o_mult_by3_1 );
-C1 <= B0 xor o_mult_by2_1 xor o_mult_by3_1 xor B3;
+C1 <=  o_mult_by2_1 xor o_mult_by3_1 xor B2 xor B3;
 --C2 Computation
 multBy2_2 : polyMultBy2 port map( i_data => B2,
                                   o_data => o_mult_by2_2);
-multBy3_2 : polyMultBy3 port map( i_data => B3,
+multBy3_2 : polyMultBy3 port map( i_data => B1,
                                   o_data => o_mult_by3_2 );
-C2 <= B0 xor B1 xor o_mult_by2_2 xor o_mult_by3_2;
+C2 <=  o_mult_by2_2 xor o_mult_by3_2 xor B0 xor B3;
 --C3 Computation
 multBy2_3 : polyMultBy2 port map( i_data => B3,
                                   o_data => o_mult_by2_3);
-multBy3_3 : polyMultBy3 port map( i_data => B0,
+multBy3_3 : polyMultBy3 port map( i_data => B2,
                                   o_data => o_mult_by3_3 );
-C3 <= o_mult_by2_3 xor B1 xor B2 xor o_mult_by3_3;
+C3 <= o_mult_by2_3  xor o_mult_by3_3 xor B0 xor B1;
 --C4 Computation
 multBy2_4 : polyMultBy2 port map( i_data => B4,
                                   o_data => o_mult_by2_4);
-multBy3_4 : polyMultBy3 port map( i_data => B5,
+multBy3_4 : polyMultBy3 port map( i_data => B7,
                                   o_data => o_mult_by3_4 );
-C4 <= o_mult_by2_4 xor o_mult_by3_4 xor B6 xor B7;
-
+C4 <= o_mult_by2_4 xor o_mult_by3_4 xor B5 xor B6;
 --C5 Computation
 multBy2_5 : polyMultBy2 port map( i_data => B5,
                                   o_data => o_mult_by2_5);
-multBy3_5 : polyMultBy3 port map( i_data => B6,
+multBy3_5 : polyMultBy3 port map( i_data => B4,
                                   o_data => o_mult_by3_5 );
-C5 <= B4 xor o_mult_by2_5 xor o_mult_by3_5 xor B7;
+C5 <= o_mult_by2_5 xor o_mult_by3_5 xor B6 xor B7;
 --C6 Computation
 multBy2_6 : polyMultBy2 port map( i_data => B6,
                                   o_data => o_mult_by2_6);
-multBy3_6 : polyMultBy3 port map( i_data => B7,
+multBy3_6 : polyMultBy3 port map( i_data => B5,
                                   o_data => o_mult_by3_6 );
-C6 <= B4 xor B5 xor o_mult_by2_6 xor o_mult_by3_6;
+C6 <= o_mult_by2_6 xor o_mult_by3_6 xor B4 xor B7;
 --C7 Computation
 multBy2_7 : polyMultBy2 port map( i_data => B7,
                                   o_data => o_mult_by2_7);
-multBy3_7 : polyMultBy3 port map( i_data => B4,
+multBy3_7 : polyMultBy3 port map( i_data => B6,
                                   o_data => o_mult_by3_7 );
-C7 <= o_mult_by2_7 xor B5 xor B6 xor o_mult_by3_7;
+C7 <= o_mult_by2_7 xor o_mult_by3_7 xor B4 xor B5 ;
 --C8 Computation
 multBy2_8 : polyMultBy2 port map( i_data => B8,
                                   o_data => o_mult_by2_8);
-multBy3_8 : polyMultBy3 port map( i_data => B9,
+multBy3_8 : polyMultBy3 port map( i_data => B11,
                                   o_data => o_mult_by3_8 );
-C8 <= o_mult_by2_8 xor o_mult_by3_8 xor B10 xor B11;
+C8 <= o_mult_by2_8 xor o_mult_by3_8 xor B10 xor B9;
 --C9 Computation
 multBy2_9 : polyMultBy2 port map( i_data => B9,
                                   o_data => o_mult_by2_9);
-multBy3_9 : polyMultBy3 port map( i_data => B10,
+multBy3_9 : polyMultBy3 port map( i_data => B8,
                                   o_data => o_mult_by3_9 );
-C9 <= B8 xor o_mult_by2_9 xor o_mult_by3_9 xor B11;
+C9 <=  o_mult_by2_9 xor o_mult_by3_9 xor B10 xor B11;
 --C10 Computation
 multBy2_10 : polyMultBy2 port map( i_data => B10,
                                    o_data => o_mult_by2_10);
-multBy3_10 : polyMultBy3 port map( i_data => B11,
+multBy3_10 : polyMultBy3 port map( i_data => B9,
                                    o_data => o_mult_by3_10 );
-C10 <= B8 xor B9 xor o_mult_by2_10 xor o_mult_by3_10;
+C10 <= o_mult_by2_10 xor o_mult_by3_10 xor B8 xor B11;
 --C11 Computation
 multBy2_11 : polyMultBy2 port map( i_data => B11,
                                    o_data => o_mult_by2_11);
-multBy3_11 : polyMultBy3 port map( i_data => B8,
+multBy3_11 : polyMultBy3 port map( i_data => B10,
                                    o_data => o_mult_by3_11 );
-C11 <= o_mult_by2_11 xor B9 xor B10 xor o_mult_by3_11;
+C11 <= o_mult_by2_11 xor o_mult_by3_11 xor B8 xor B9;
 --C12 Computation
 multBy2_12 : polyMultBy2 port map( i_data => B12,
                                    o_data => o_mult_by2_12);
-multBy3_12 : polyMultBy3 port map( i_data => B13,
+multBy3_12 : polyMultBy3 port map( i_data => B15,
                                    o_data => o_mult_by3_12 );
-C12 <= o_mult_by2_12 xor o_mult_by3_12 xor B14 xor B15;
+C12 <= o_mult_by2_12 xor o_mult_by3_12 xor B14 xor B13;
 --C13 Computation
 multBy2_13 : polyMultBy2 port map( i_data => B13,
                                    o_data => o_mult_by2_13);
-multBy3_13 : polyMultBy3 port map( i_data => B14,
+multBy3_13 : polyMultBy3 port map( i_data => B12,
                                    o_data => o_mult_by3_13 );
-C13 <= B12 xor o_mult_by2_13 xor o_mult_by3_13 xor B15;
+C13 <=  o_mult_by2_13 xor o_mult_by3_13 xor B14 xor B15;
 --C14 Computation
 multBy2_14 : polyMultBy2 port map( i_data => B14,
                                    o_data => o_mult_by2_14);
-multBy3_14 : polyMultBy3 port map( i_data => B15,
+multBy3_14 : polyMultBy3 port map( i_data => B13,
                                    o_data => o_mult_by3_14 );
-C14 <= B12 xor B13 xor o_mult_by2_14 xor o_mult_by3_14;
+C14 <= B12 xor B15 xor o_mult_by2_14 xor o_mult_by3_14;
 --C15 Computation
 multBy2_15 : polyMultBy2 port map( i_data => B15,
                                    o_data => o_mult_by2_15);
-multBy3_15 : polyMultBy3 port map( i_data => B12,
+multBy3_15 : polyMultBy3 port map( i_data => B14,
                                    o_data => o_mult_by3_15 );
-C15 <= o_mult_by2_15 xor B13 xor B14 xor o_mult_by3_15;
+C15 <= o_mult_by2_15 xor B13 xor B12 xor o_mult_by3_15;
 
 o_block <= C15 & C14 & C13 & C12 & C11 & C10 & C9 & C8 & C7 & C6 & C5 & C4 & C3 & C2 & C1 & C0;
-end architecture;
+end architecture; 
