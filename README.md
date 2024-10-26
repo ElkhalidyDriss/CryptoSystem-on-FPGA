@@ -52,7 +52,8 @@ To generate the waveforms and visualize them, follow these steps:
 2. **Navigate to the project directory**
 3. **Run the script** with the name of test bench file as a parameter. For example:
    ```bash
-   python generate_waveforms.py top_tb.vhd
+   python generate_waveforms.py top_tb.vhd```
+**vcd file will be saved to waveforms/ and GTKwave will be opened**
 
 
  
