@@ -56,6 +56,20 @@ To generate the waveforms and visualize them, follow these steps:
    python generate_waveforms.py top_tb.vhd```
 **vcd file will be saved to waveforms/ and GTKwave will be opened**
 ![gtkwave](./Docs/gtkwave.png)
+### Future Enhancements
 
+There is always room for improvement in this project. Here are some planned enhancements for the near and distant future:
+
+- **Random Key Generation**: Implementing a random key generation mechanism to replace the current hardcoded fixed key value. *(Near Future)*
+
+- **On-the-Fly S-Box Calculation**: Transitioning from a pre-saved ROM table to on-the-fly calculations using Galois fields for the S-Box implementation. *(Later)*
+
+- **Padding Support**: Adding functionality to support padding for plaintext inputs that are not equal to 128 bits. *(Near Future)*
+
+- **Control and Buffer Registers**: Introducing control registers and buffer registers to store the input and output plaintext. *(Near Future)*
+
+- **SoC Integration**: Integrating the design into a System on Chip (SoC) for useful usage. *(Later)*
+
+ 
  
 
